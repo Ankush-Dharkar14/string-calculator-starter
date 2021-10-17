@@ -1,8 +1,9 @@
 package calculator;
 
 class StringCalculator {
+	 int count=0;
 	public int add(String numbers) {
-
+		count++;
 		if (isEmpty(numbers)) {
 			return 0;
 		}
@@ -53,5 +54,9 @@ class StringCalculator {
 		}
 		return sum;
 	}
+	
+	 public int GetCalledCount() {
+		 return count;
+	 }
 
 }

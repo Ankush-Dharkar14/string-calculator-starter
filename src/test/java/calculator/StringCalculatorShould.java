@@ -63,4 +63,13 @@ class StringCalculatorShould {
 		assertEquals(sc.add("-8,-5,-2,5"), 5);
 	}
 	
+	@Test
+	 public void test_GetCount() {
+		StringCalculator c=new StringCalculator();
+		c.add("-8,5");
+		c.add("-8,-5,-2,5");
+		c.add(";\n2;4");
+		assertEquals(c.GetCalledCount(),3);
+	}
+	
 }
