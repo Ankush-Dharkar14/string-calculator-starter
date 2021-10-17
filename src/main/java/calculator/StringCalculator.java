@@ -3,7 +3,8 @@ package calculator;
 class StringCalculator {
 
 	public int add(String numbers) {
-		String[] inputNumbers = numbers.split(",");
+		final String delimiter =",|\n";
+		String[] inputNumbers = numbers.split(delimiter);
 		if (isEmpty(numbers)) {
 			return 0;
 		}
@@ -27,7 +28,6 @@ class StringCalculator {
 			sum += convertStringToInt(noOfValues);
 		}
 		return sum;
-
 	}
 
 }

@@ -32,5 +32,10 @@ class StringCalculatorShould {
 	public void test_StringHasUnknownValues_ReturnSum() {
 		assertEquals(sc.add("1,2,4"), 7);
 	}
-
+	
+	@Test
+	public void test_NumbersDelimitedWithNewLine_ReturnSum() {
+		assertEquals(sc.add("1\n2,4"), 7);
+	}
+	
 }
