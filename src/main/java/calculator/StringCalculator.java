@@ -36,10 +36,20 @@ class StringCalculator {
 
 	private int sumValues(String[] nums) {
 		int sum = 0;
-
+		boolean flag=false;
+		String msg="";
 		for (String noOfValues : nums) {
 			int temp = convertStringToInt(noOfValues);
+			if(temp<0) {
+				flag=true;
+				msg+=(" "+noOfValues);	
+			}
+			else {
 			sum += temp;
+			}
+		}
+		if(flag) {
+			System.out.println("Negatives not Allowed"+msg);
 		}
 		return sum;
 	}
