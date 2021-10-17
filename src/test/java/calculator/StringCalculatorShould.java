@@ -72,4 +72,12 @@ class StringCalculatorShould {
 		assertEquals(c.GetCalledCount(),3);
 	}
 	
+	@Test
+	@Order(9)
+	public void test_NumbersGreaterthan1000() {
+		assertEquals(sc.add("1001,5"), 5);
+	}
+
+	
+	
 }

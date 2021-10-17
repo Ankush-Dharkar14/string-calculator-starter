@@ -46,6 +46,7 @@ class StringCalculator {
 				msg+=(" "+noOfValues);	
 			}
 			else {
+				if(temp<=1000)
 			sum += temp;
 			}
 		}
