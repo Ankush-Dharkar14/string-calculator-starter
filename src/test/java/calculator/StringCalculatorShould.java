@@ -57,4 +57,10 @@ class StringCalculatorShould {
 		assertEquals(sc.add("-8,5"), 5);
 	}
 	
+	@Test
+	@Order(8)
+	public void test_MultipleNegativeNumbers() {
+		assertEquals(sc.add("-8,-5,-2,5"), 5);
+	}
+	
 }
