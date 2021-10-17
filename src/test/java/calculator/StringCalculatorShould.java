@@ -27,5 +27,10 @@ class StringCalculatorShould {
 	public void test_StringHasTwoValues_ReturnSum() {
 		assertEquals(sc.add("1,2"), 3);
 	}
+	
+	@Test
+	public void test_StringHasUnknownValues_ReturnSum() {
+		assertEquals(sc.add("1,2,4"), 7);
+	}
 
 }

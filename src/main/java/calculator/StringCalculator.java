@@ -10,7 +10,7 @@ class StringCalculator {
 		if (numbers.length() == 1) {
 			return convertStringToInt(numbers);
 		}
-		return sumValues(inputNumbers[0],inputNumbers[1]);
+		return sumValues(inputNumbers);
 	}
 
 	private boolean isEmpty(String num) {
@@ -21,9 +21,12 @@ class StringCalculator {
 		return Integer.parseInt(num);
 	}
 
-	private int sumValues(String num1,String num2) {
-		return convertStringToInt(num1)+convertStringToInt(num2);
-		 
+	private int sumValues(String[] nums) {
+		int sum = 0;
+		for (String noOfValues : nums) {
+			sum += convertStringToInt(noOfValues);
+		}
+		return sum;
 
 	}
 
